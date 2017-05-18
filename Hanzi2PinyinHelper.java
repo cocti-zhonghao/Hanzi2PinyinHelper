@@ -6,12 +6,12 @@ package com.bignaga.util;
 public class Hanzi2PinyinHelper {
     public static String Hanzi2Pinyin(String s)
     {
-        String pinyin = "";
+        StringBuilder sb = new StringBuilder();
         for(int ii = 0; ii < s.length(); ++ii)
         {
-            pinyin += Hanzi2Pinyin(s.charAt(ii));
+            sb.append(Hanzi2Pinyin(s.charAt(ii)));
         }
-        return pinyin;
+        return sb.toString();
     }
 
 
